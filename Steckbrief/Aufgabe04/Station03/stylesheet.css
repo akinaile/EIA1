@@ -1,0 +1,67 @@
+
+body {
+    background-image: url(bg-3.png);
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: block;
+    position: relative;
+}
+
+.stern {
+    position: absolute;
+   z-index: 1;
+}
+.stern .stern1{
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 70px;
+}
+.stern .stern1:hover{
+    background-image: url(stern_hover.png);
+    transition: 0.2s;
+}
+.stern .stern2{
+    position: absolute;
+    margin-top: -160px;
+    margin-left: 140px;
+}
+.stern .stern2:hover{
+    background-image: url(stern_hover.png);
+    transition: 0.2s;
+}
+.stern .stern3{
+    position: absolute;
+    margin-top: -210px;
+    margin-left: 340px;
+}
+.stern .stern3:hover{
+    background-image: url(stern_hover.png);
+    transition: 0.2s;
+}
+.stern .stern4{
+    position: absolute;
+    margin-top: -110px;
+    margin-left: 460px;
+}
+.stern .stern4:hover{
+    background-image: url(stern_hover.png);
+    transition: 0.2s;
+}
+.text {
+    color: white;
+    position: absolute;
+    top: 0;
+    padding:80px 50px 75px;
+    width: 450px;
+    margin: 30px 30px;
+}
+
+.text .headline {
+    font-size: 30px;
+    margin-top: -20px;
+}

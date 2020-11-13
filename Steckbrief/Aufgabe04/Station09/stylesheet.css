@@ -1,0 +1,114 @@
+
+body {
+    background-image: url(bg-6.png);
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: block;
+    position: relative;
+}
+
+.schnee1 {
+    position: absolute;
+    top: -5px;
+    right: 70px;
+    animation-duration: 8s;
+    animation-name: slideinA;
+    animation-iteration-count: infinite;
+    animation-delay:0.4s;
+}
+@keyframes slideinA {from{
+    top: -6px;
+    left: 70px;
+    opacity: 100%;
+    }
+    to {
+    top: 330px;
+    left: 70px;
+    opacity: 5%;
+    }
+}
+.schnee2 {
+    position: absolute;
+    top: -5px;
+    right: -200px;
+    animation-duration: 8s;
+    animation-name: slideinB;
+    animation-iteration-count: infinite;
+    animation-delay:0.1s;
+}
+@keyframes slideinB {from{
+    top: 76px;
+    left: 200px;
+    opacity: 100%;
+    }
+    to {
+    top: 390px;
+    left: 200px;
+    opacity: 5%;
+    }
+}
+.schnee3 {
+    position: absolute;
+    top: -5px;
+    right: -200px;
+    animation-duration: 8s;
+    animation-name: slideinC;
+    animation-iteration-count: infinite;
+    animation-delay:0.1s;
+}
+@keyframes slideinC {from{
+    top: 0px;
+    left: 350px;
+    opacity: 100%;
+    }
+    to {
+    top: 320px;
+    left: 350px;
+    opacity: 5%;
+    }
+}
+.schnee4 {
+    position: absolute;
+    top: -5px;
+    right: -200px;
+    animation-duration: 8s;
+    animation-name: slideinD;
+    animation-iteration-count: infinite;
+    animation-delay:0.4s;
+}
+@keyframes slideinD {from{
+    top: 0px;
+    left: 450px;
+    opacity: 100%;
+    }
+    to {
+    top: 390px;
+    left: 450px;
+    opacity: 5%;
+    }
+}
+
+.schleife {
+    z-index: 1;
+    position: absolute;
+    margin: -130px 370px
+
+}
+.text {
+    color: white;
+    position: absolute;
+    top: 0;
+    padding:80px 50px 75px;
+    width: 450px;
+    margin: 30px 30px;
+}
+
+.text .headline {
+    font-size: 30px;
+    margin-top: -20px;
+}

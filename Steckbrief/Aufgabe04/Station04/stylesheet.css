@@ -1,0 +1,37 @@
+
+body {
+    background-image: url(bg-4.png);
+    font-family: "CutiesPeaches";
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: block;
+    position: relative;
+}
+
+
+.text {
+    color: white;
+    position: absolute;
+    top: 0;
+    padding:80px 50px 75px;
+    width: 450px;
+    margin: 30px 10px;
+}
+
+.text .headline {
+    font-size: 80px;
+    margin-top: -80px;
+}
+.text .headline2 {
+    font-size: 40px;
+    margin-top: -50px;
+}
+@font-face {
+font-family: "CutiesPeaches";
+src: url("CutiesPeaches.ttf")
+}

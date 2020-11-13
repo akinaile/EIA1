@@ -1,0 +1,43 @@
+
+body {
+    background-image: url(bg-2.png);
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: block;
+    position: relative;
+}
+
+.images {
+    position: absolute;
+}
+
+.busch {
+    position: absolute;
+    top: -460px;
+    left: -60px;
+}
+
+.pinguin {
+    position: absolute;
+    top: -180px;
+    left: 460px;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    top: 0;
+    padding:80px 50px 75px;
+    width: 450px;
+    margin: 30px 30px;
+}
+
+.text .headline {
+    font-size: 30px;
+    margin-top: -20px;
+}

@@ -1,0 +1,27 @@
+
+body {
+    background-image: url(bg-5.png);
+    font-family: "CutiesPeaches";
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: block;
+    position: relative;
+}
+
+.video {
+    position: absolute;
+    margin-top: -360px;
+    margin-left: 19px;
+}
+
+.schleife {
+    z-index: 1;
+    position: absolute;
+    margin: -130px 370px
+
+}
