@@ -1,0 +1,140 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url(christmas-bg.jpg);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pads{
+    top:10px;
+    position: relative;
+    width: 500px;
+    height:650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.pads div{ 
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    border-style: inset;
+} 
+.pads .pad0 {
+    background-image: linear-gradient(#4a79f0, #23cfc6) ;    
+}     
+.pads .pad1 {
+    background-image: linear-gradient(#4a79f0, #23cfc6) ;    
+}  
+.pads .pad2 {
+    background-image: linear-gradient(#4a79f0, #23cfc6) ;    
+}  
+.pads .pad3 {
+    background-image: linear-gradient(#a305ff, #ff56ff) ;     
+}  
+.pads .pad4 {
+    background-image: linear-gradient(#a305ff, #ff56ff) ;        
+}  
+.pads .pad5 {
+    background-image: linear-gradient(#a305ff, #ff56ff) ;       
+} 
+.pads .pad6 {
+    background-image: linear-gradient(#a305ff, #ff56ff) ;       
+}  
+.pads .pad7 {
+    background-image: linear-gradient(#ffa200, #ffec42) ;  
+}  
+.pads .pad8 {
+    background-image: linear-gradient(#ffa200, #ffec42) ;   
+}  
+.pads .pad0:hover {
+    cursor: pointer;
+}
+
+.pads .pad0:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad1:hover {
+    cursor: pointer;
+}
+
+.pads .pad1:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad2:hover {
+    cursor: pointer;
+}
+
+.pads .pad2:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad3:hover {
+    cursor: pointer;
+}
+
+.pads .pad3:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad4:hover {
+    cursor: pointer;
+}
+
+.pads .pad4:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad5:hover {
+    cursor: pointer;
+}
+
+.pads .pad5:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad6:hover {
+    cursor: pointer;
+}
+
+.pads .pad6:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad7:hover {
+    cursor: pointer;
+}
+
+.pads .pad7:active {
+    transform: scale(0.97);
+    transition: all .01;
+}
+.pads .pad8:hover {
+    cursor: pointer;
+}
+
+.pads .pad8:active {
+    transform: scale(0.97);
+    transition: all .01;
+} 
+
+.button {
+    margin-bottom:15px;
+    opacity: 100%;
+} 
+.button:hover {
+    opacity: 100%;
+} 
+.button:hover:active {
+    transform: scale(0.97);
+    transition: all .01;
+} 
