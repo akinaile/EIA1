@@ -11,7 +11,7 @@ pads[7] = new Audio("laugh-1.mp3");
 pads[8] = new Audio("laugh-2.mp3");
 //Sounds abspielen
 function playSample(x) {
-    pads[x].play;
+    pads[x].play();
 }
 //Sounds
 document.querySelector(".pad0").addEventListener("click", function () {

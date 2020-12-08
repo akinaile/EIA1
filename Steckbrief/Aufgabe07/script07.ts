@@ -13,7 +13,7 @@ pads[8] = new Audio ("laugh-2.mp3");
 
 //Sounds abspielen
 function playSample(n:number){
-    pads[n].play;
+    pads[n].play();
 }
 
 //Sounds
