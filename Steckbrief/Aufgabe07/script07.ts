@@ -1,6 +1,6 @@
 //Arrays
-const pads: HTMLAudioElement [] = []
-pads[0] = new Audio ("hihat.mp3");
+var pads: HTMLAudioElement [] = []
+pads[0] = new Audio ('hihat.mp3');
 pads[1] = new Audio ("kick.mp3");
 pads[2] = new Audio ("snare.mp3");
 pads[3] = new Audio ("A.mp3");
@@ -12,8 +12,8 @@ pads[8] = new Audio ("laugh-2.mp3");
 
 
 //Sounds abspielen
-function playSample(x:number){
-    pads[x].play;
+function playSample(n:number){
+    pads[n].play;
 }
 
 //Sounds
@@ -48,10 +48,10 @@ document.querySelector(".pad8").addEventListener("click", function(){
 //Button
 function interval() {
     setInterval(function () {
-        pads[6].play();
-        pads[5].play();
-        pads[4].play();
-    }, 400);
+        pads[0].play();
+        pads[1].play();
+        pads[2].play();
+    }, 450);
 }
 document.querySelector(".button").addEventListener("click", function () {
     interval();
