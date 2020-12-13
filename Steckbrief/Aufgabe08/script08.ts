@@ -14,36 +14,43 @@ pads[8] = new Audio ("laugh-2.mp3");
 //Sounds
 document.querySelector(".pad0").addEventListener("click", function (): void {
     playSample(0);
+    recSound(0);
 });
 document.querySelector(".pad1").addEventListener("click", function (): void {
     playSample(1);
+    recSound(1);
 });
 document.querySelector(".pad2").addEventListener("click", function (): void {
     playSample(2);
+    recSound(2);
 });
 document.querySelector(".pad3").addEventListener("click", function (): void {
     playSample(3);
+    recSound(3);
 });
 document.querySelector(".pad4").addEventListener("click", function (): void {
     playSample(4);
+    recSound(4);
 });
 document.querySelector(".pad5").addEventListener("click", function (): void {
     playSample(5);
+    recSound(5);
 });
 document.querySelector(".pad6").addEventListener("click", function (): void {
     playSample(6);
+    recSound(6);
 });
 document.querySelector(".pad7").addEventListener("click", function (): void {
     playSample(7);
+    recSound(7);
 });
 document.querySelector(".pad8").addEventListener("click", function (): void {
     playSample(8);
+    recSound(8);
 });
 
 
-document.querySelector(".buttons").addEventListener("click", function (): void {
-    interval();
-});
+
 
 //HTML Elemente (Buttons)
 const playB: HTMLElement = document.getElementById("play");
@@ -51,19 +58,20 @@ const stopB: HTMLElement = document.getElementById("stop");
 const recB: HTMLElement = document.getElementById("rec");
 const recBred: HTMLElement = document.getElementById("recred");
 const deleB: HTMLElement = document.getElementById("delete");
-let nullArray: number [] = [4, 5, 6];
+
 
 let i: number = 0;
 let x: number = 0;
 
 //booleans
-let boolRecord: boolean;
-let boolPlayStop: boolean;
+let boolRecord: boolean = false;
+let boolPlayStop: boolean = false;
 
 //toggle this please
 function toggleThis(ONEHTMLELEMENT: HTMLElement, TWOHTMLELEMENT: HTMLElement): void {
     ONEHTMLELEMENT.classList.add("isHidden"); //wird nicht angezeigt
     TWOHTMLELEMENT.classList.remove("isHidden"); //wird nach remove wieder angezeigt
+    console.log("hide me");
 }
 
 //Funktion(Sounds abspielen)
@@ -72,31 +80,35 @@ function playSample(x: number): void {
 }
 
 //Sounds werden zum Beat
-let intervallArray: number [] = [];
-intervallArray[0] = 0;
-intervallArray[1] = 1;
-intervallArray[2] = 2;
+let intervallArray: number [] = [2, 1, 0];
+
 
 function interval(): void {
     setInterval(function (): void {
-        pads[0].play();
         pads[1].play();
         pads[2].play();
-    },          450 );
+        pads[1].play();
+        pads[2].play();
+        pads[0].play();
+    },          250 );
 }
 
 //play and stop
 document.getElementById("play").addEventListener("click", function(): void {
     toggleThis(playB, stopB);
-    triggerSound(true);
+    boolPlayStop = true;
+    triggerSound();
+    console.log("play");
 });
 
 stopB.addEventListener("click", function(): void {
     toggleThis(stopB, playB);
-    triggerSound (false);
+    boolPlayStop = false;
+    triggerSound();
+    console.log("stop");
 });
 
-//Rec + RecRed
+//Rec + RecRed farb wechsel
 document.getElementById("rec").addEventListener("click", function(): void {
     toggleThis (recBred, recB);
     boolRecord = true; //ist schwarz
@@ -110,31 +122,31 @@ document.getElementById("recred").addEventListener("click", function(): void {
 
 function recSound(x: number): void {
     if (boolRecord == true) {
-        intervallArray.push(x);
+        intervallArray.unshift(x);
     }
 }
 
 
 //Delete
 deleB.addEventListener("click", function(): void {
-    intervallArray.length = 0;
+    intervallArray = [];
+    console.log("gelöscht");
 });
 
 //Sound play and stop Funktion, trigger
 var intervallSound: number;
 
-function triggerSound (i: boolean): void {
-    if (i == true) {
+function triggerSound(): void {
+    if (boolPlayStop == true) {
             intervallSound = setInterval(function(): void {
-                playSample(intervallArray[x]);
-                x++
-                console.log(x);
-                if (x >= nullArray.length) {
-                    x = 0;
-                }
-                },                       200);
+            if (i < intervallArray.length) {
+                playSample(intervallArray[i]);
+                i++;
+            } else {
+                i = 0;
             }
-    } else {
-        window.location.reload(false);
+        },                               200); 
+    } else  {
+        clearInterval(intervallSound);
     }
 }

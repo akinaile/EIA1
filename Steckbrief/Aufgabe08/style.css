@@ -6,52 +6,62 @@ body{
     background-image: url(christmas-bg.jpg);
     height: 100%;
     display: flex;
-    align-items: center;
+    margin-top: 10%;;
     justify-content: center;
 }
 
 .pads{
-    top:10px;
     position: relative;
     width: 500px;
-    height:650px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .pads div{ 
-    margin: 5px;
+    margin: 3px;
     width: 150px;
     height: 150px;
+    border-width: 5px;
     border-radius: 20px;
-    border-style: inset;
+    border-style: outset;
+
 } 
 .pads .pad0 {
+
     background-image: linear-gradient(#4a79f0, #23cfc6) ;    
 }     
 .pads .pad1 {
+
     background-image: linear-gradient(#4a79f0, #23cfc6) ;    
 }  
 .pads .pad2 {
+
     background-image: linear-gradient(#4a79f0, #23cfc6) ;    
 }  
 .pads .pad3 {
+
     background-image: linear-gradient(#a305ff, #ff56ff) ;     
 }  
 .pads .pad4 {
+
     background-image: linear-gradient(#a305ff, #ff56ff) ;        
 }  
 .pads .pad5 {
+
     background-image: linear-gradient(#a305ff, #ff56ff) ;       
 } 
 .pads .pad6 {
+
     background-image: linear-gradient(#a305ff, #ff56ff) ;       
 }  
 .pads .pad7 {
+
     background-image: linear-gradient(#ffa200, #ffec42) ;  
 }  
 .pads .pad8 {
+
     background-image: linear-gradient(#ffa200, #ffec42) ;   
 }  
 .pads .pad0:hover {
@@ -127,24 +137,17 @@ body{
     transition: all .01;
 } 
 
-.buttons {
-    margin-bottom:100px;
-    opacity: 100%;
-    margin: 10px;
-    width: 150px;
-    height: 150px;
-    border-radius: none;
-    border-style: none;
-} 
-
-.button:active {
-    transform: scale(0.57);
-    transition: all .01;
-}
-
 i {
-    font-size: 40px;
-    margin-left: 50px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 60px;
+    flex-wrap: wrap;
+    float: left;
+    color: ivory;
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: outset;
+    background-image: linear-gradient(rgb(150, 131, 165), rgb(33, 2, 36)) ;  
 }
 i:hover {
     color: #FF4000;
