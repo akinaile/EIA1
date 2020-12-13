@@ -52,11 +52,13 @@ var stopB = document.getElementById("stop");
 var recB = document.getElementById("rec");
 var recBred = document.getElementById("recred");
 var deleB = document.getElementById("delete");
+var deleBR = document.getElementById("deletered");
 var i = 0;
 var x = 0;
 //booleans
 var boolRecord = false;
 var boolPlayStop = false;
+var boolDel = false;
 //toggle this please
 function toggleThis(ONEHTMLELEMENT, TWOHTMLELEMENT) {
     ONEHTMLELEMENT.classList.add("isHidden"); //wird nicht angezeigt
@@ -126,6 +128,89 @@ function triggerSound() {
     }
     else {
         clearInterval(intervallSound);
+    }
+}
+//Tasten Belegung
+// tslint:disable-next-line: typedef
+document.addEventListener("keydown", function (click) {
+    switch (click.key) {
+        case "1":
+            playSample(0);
+            recSound(0);
+            break;
+        case "2":
+            playSample(1);
+            recSound(1);
+            break;
+        case "3":
+            playSample(2);
+            recSound(2);
+            break;
+        case "4":
+            playSample(3);
+            recSound(3);
+            break;
+        case "5":
+            playSample(4);
+            recSound(4);
+            break;
+        case "6":
+            playSample(5);
+            recSound(5);
+            break;
+        case "7":
+            playSample(6);
+            recSound(6);
+            break;
+        case "8":
+            playSample(7);
+            recSound(7);
+            break;
+        case "9":
+            playSample(8);
+            recSound(8);
+            break;
+        case " ":
+            playstopKey();
+            break;
+        case "y":
+            recKey();
+            break;
+        case "m":
+            intervallArray = [];
+            break;
+    }
+    function playstopKey() {
+        if (boolPlayStop == false) {
+            toggleThis(playB, stopB);
+            boolPlayStop = true;
+            triggerSound();
+        }
+        else if (boolPlayStop == true) {
+            toggleThis(stopB, playB);
+            boolPlayStop = false;
+            triggerSound();
+        }
+    }
+});
+function recKey() {
+    if (boolRecord == false) {
+        toggleThis(recB, recBred);
+        boolRecord = true;
+    }
+    else if (boolRecord == true) {
+        toggleThis(recBred, recB);
+        boolRecord = false;
+    }
+}
+function delKey() {
+    if (boolDel == false) {
+        toggleThis(deleB, deleBR);
+        boolRecord = true;
+    }
+    else if (boolDel == true) {
+        toggleThis(deleBR, deleB);
+        boolRecord = false;
     }
 }
 //# sourceMappingURL=script08.js.map

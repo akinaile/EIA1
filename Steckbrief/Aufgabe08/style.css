@@ -139,7 +139,7 @@ body{
 
 i {
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
     font-size: 60px;
     flex-wrap: wrap;
     float: left;
@@ -150,8 +150,12 @@ i {
     background-image: linear-gradient(rgb(150, 131, 165), rgb(33, 2, 36)) ;  
 }
 i:hover {
-    color: #FF4000;
+    color: #ff4000;
     cursor: pointer;
+}
+i:active {
+    transform: scale(0,97);
+    transition: all .01;
 }
 #stop {
     color: #FF4000;
@@ -159,6 +163,16 @@ i:hover {
 #recred {
     color: #FF4000;
 }
+#deleBR {
+    color: #FF4000;
+}
 .isHidden {
     display: none !important;
+}
+.howTo {
+    margin-bottom: 100px;
+    color: ivory;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    float: right;
 }
