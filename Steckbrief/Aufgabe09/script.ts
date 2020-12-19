@@ -47,9 +47,9 @@ namespace Aufgabe09 {
     }
 
 //addTask Funkion
-    function addTask(): void {
+    function addTask(): void {  
         
-//Elemente erstellen
+        //Elemente erstellen
         let container: HTMLDivElement = document.createElement("div");
         container.className = "container"; //container der bei neuen todos kommt
 
