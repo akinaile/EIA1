@@ -78,7 +78,7 @@ function interval() {
         pads[1].play();
         pads[2].play();
         pads[0].play();
-    }, 250);
+    }, 400);
 }
 //play and stop
 document.getElementById("play").addEventListener("click", function () {
@@ -104,7 +104,7 @@ document.getElementById("recred").addEventListener("click", function () {
 });
 function recSound(x) {
     if (boolRecord == true) {
-        intervallArray.unshift(x);
+        intervallArray.push(x);
     }
 }
 //Delete
@@ -124,7 +124,7 @@ function triggerSound() {
             else {
                 i = 0;
             }
-        }, 200);
+        }, 400);
     }
     else {
         clearInterval(intervallSound);

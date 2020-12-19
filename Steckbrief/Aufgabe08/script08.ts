@@ -93,7 +93,7 @@ function interval(): void {
         pads[1].play();
         pads[2].play();
         pads[0].play();
-    },          250 );
+    },          400 );
 }
 
 //play and stop
@@ -124,7 +124,7 @@ document.getElementById("recred").addEventListener("click", function(): void {
 
 function recSound(x: number): void {
     if (boolRecord == true) {
-        intervallArray.unshift(x);
+        intervallArray.push(x);
     }
 }
 
@@ -147,7 +147,7 @@ function triggerSound(): void {
             } else {
                 i = 0;
             }
-        },                               200); 
+        },                               400); 
     } else  {
         clearInterval(intervallSound);
     }
