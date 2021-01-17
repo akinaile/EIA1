@@ -19,6 +19,55 @@ let newArray: InterfaceList[] = [
     }
 ];
 
+//Sprachsteuerung
+
+declare const Artyom: any;
+
+window.addEventListener("click", function (): void {
+    const artyom: any = new Artyom();
+
+    function startContinuousArtyom(): void {
+        artyom.fatality();
+
+        setTimeout(
+            function (): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function (): void {
+                    console.log("Ready!");
+                });
+            },
+            250);
+    }
+
+    startContinuousArtyom();
+
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i: any, wildcard: string): void { 
+            newArray.unshift({
+                content: wildcard,
+                checked: false
+            });
+
+            drawListToDOM();
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            artyom.say("Deine Aufgabe" + wildcard + " wurde ergänzt");
+        }
+    });
+    document.querySelector("#SprachBtn").addEventListener("click", function (): void {
+        artyom.say("Spracheingabe ist aktiviert");
+        startContinuousArtyom();
+    });
+    });
+
+
+
 var inputDOMElement: HTMLInputElement;
 var addButtonDOMElement: HTMLElement;
 var todosDOMElement: HTMLElement;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <script src="artyom.window.min.js" defer></script> 
 </head>
 <body>
     <main>
@@ -15,12 +16,15 @@
         <p id="counter">3 in total</p>
         <p id="finished">3 finish</p>
         <p id="notfinished">3 not finish</p>
+        <p>
+            <button id="SprachBtn">Spracheingabe</button>
+            <br> Klicke 2 mal den Button und sage "Erstelle Aufgabe..." <br>
+            </p>
 
         <div class="inputGroup">
             <input type="text" id="inputTodo" placeholder="Add another task">
             <button id="addButton"><i class="fas fa-plus-circle"></i></button>
         </div>
-
         <div id="todos"></div>
     </main>
 </body>

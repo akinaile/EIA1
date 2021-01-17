@@ -12,6 +12,41 @@ var newArray = [
         checked: false
     }
 ];
+window.addEventListener("click", function () {
+    var artyom = new Artyom();
+    function startContinuousArtyom() {
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Ready!");
+            });
+        }, 250);
+    }
+    startContinuousArtyom();
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            newArray.unshift({
+                content: wildcard,
+                checked: false
+            });
+            drawListToDOM();
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            artyom.say("Deine Aufgabe" + wildcard + " wurde ergänzt");
+        }
+    });
+    document.querySelector("#SprachBtn").addEventListener("click", function () {
+        artyom.say("Spracheingabe ist aktiviert");
+        startContinuousArtyom();
+    });
+});
 var inputDOMElement;
 var addButtonDOMElement;
 var todosDOMElement;
