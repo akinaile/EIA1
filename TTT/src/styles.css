@@ -1,0 +1,50 @@
+:root {
+    --width: 600px;
+}
+
+.game {
+    background-color: #ccc;
+    width: var(--width);
+    height: var(--width);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.easy > .box {
+    width: calc(var(--width) / 3);
+    height: calc(var(--width) / 3);
+}
+
+.medium > .box {
+    width: calc(var(--width) / 4);
+    height: calc(var(--width) / 4);
+}
+
+.hard > .box {
+    width: calc(var(--width) / 5);
+    height: calc(var(--width) / 5);
+}
+
+.box {
+    background-color: #aaa;
+    text-align: center;
+    font-size: calc(var(--width) / 4);
+}
+.box[data-value="null"]:hover {
+    background-color: #888;
+    cursor: pointer;
+}
+.box[data-value="x"] {
+    pointer-events: none;
+    background-color: red;
+}
+.box[data-value="o"] {
+    pointer-events: none;
+    background-color: blue;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    width: var(--width);
+}
